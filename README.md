@@ -37,7 +37,7 @@
 
 当前版本 **v0.1.0**。
 
-1. 从 [官网下载页](https://github.com/YinHeng89/FocalVeil-website) 下载 `.dmg`（或 `.zip`）。
+1. 从 [官网下载页](https://yinheng89.github.io/FocalVeil-website/index.html#download) 下载 `.dmg`（或 `.zip`）。
 2. 把「凝焦」拖进「应用程序」。
 3. 首次打开若被系统拦下，在访达里右键点击它，选择「打开」。
 4. 点菜单栏图标，选择「启用隐私模糊」，按提示授予屏幕录制权限即可。
