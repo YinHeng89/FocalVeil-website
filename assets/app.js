@@ -106,6 +106,11 @@
       "meta.arch": "架构",
       "meta.perm": "权限",
       "meta.price": "价格",
+      "meta.version.val": "0.1.0",
+      "meta.req.val": "macOS 14+",
+      "meta.arch.val": "通用（arm64 / x86_64）",
+      "meta.perm.val": "屏幕录制（可选）",
+      "meta.price.val": "$6.99 · 7 天试用",
       "download.updateNote": "自动更新随 v0.2.0 上线，之后菜单栏「检查更新…」即可升级。",
 
       "title.pricing": "定价 — 凝焦 FocalVeil",
@@ -291,6 +296,11 @@
       "meta.arch": "Architecture",
       "meta.perm": "Permission",
       "meta.price": "Price",
+      "meta.version.val": "0.1.0",
+      "meta.req.val": "macOS 14+",
+      "meta.arch.val": "Universal (arm64 / x86_64)",
+      "meta.perm.val": "Screen Recording (optional)",
+      "meta.price.val": "$6.99 · 7-day trial",
       "download.updateNote": "Automatic updates land with v0.2.0; after that, “Check for Updates…” in the menu bar upgrades you.",
 
       "title.pricing": "Pricing — FocalVeil",
