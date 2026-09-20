@@ -28,10 +28,10 @@
       "theme.toLight": "切换到浅色配色",
       "theme.toDark": "切换到深色配色",
 
-      "title.home": "凝焦 FocalVeil — 只让当前窗口是清晰的",
+      "title.home": "凝焦 FocalVeil — 让焦点窗口清晰，让其余世界隐去。",
       "meta.home": "一个常驻菜单栏的 macOS 小工具：只让当前焦点窗口保持清晰，其余所有背景全部实时高斯模糊。画面只在本机内存处理，不保存、不上传。",
       "hero.eyebrow": "macOS 菜单栏工具",
-      "hero.title": "只让当前窗口<br><span class=\"accent\">是清晰的</span>",
+      "hero.title": "让焦点窗口清晰，<br><span class=\"accent\">让其余世界隐去。</span>",
       "hero.lede": "打开之后，屏幕上除你正在用的那个窗口之外的一切 —— 其他窗口、桌面、菜单栏 —— 都被实时高斯模糊盖住。焦点窗口从洞里透出来，依然可点击、可输入、可交互。",
       "hero.download": "下载 macOS 版",
       "hero.how": "它怎么做到",
