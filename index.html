@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="title.home">凝焦 FocalVeil — 只让当前窗口是清晰的</title>
+<meta name="description" data-i18n-attr="content:meta.home" content="一个常驻菜单栏的 macOS 小工具：只让当前焦点窗口保持清晰，其余所有背景全部实时高斯模糊。画面只在本机内存处理，不保存、不上传。">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main" data-i18n="skip">跳到主要内容</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-icon" src="assets/icon.png" alt="" width="32" height="32">
+      <span class="brand-name">凝焦</span>
+      <span class="brand-sub">FocalVeil</span>
+    </a>
+    <nav class="nav-links" aria-label="站内导航">
+      <a href="index.html#features" data-i18n="nav.features">特性</a>
+      <a href="index.html#how" data-i18n="nav.how">原理</a>
+      <a href="pricing.html" data-i18n="nav.pricing">定价</a>
+      <a href="index.html#faq" data-i18n="nav.faq">常见问题</a>
+      <a href="index.html#download" data-i18n="nav.download">下载</a>
+      <a href="privacy.html" data-i18n="nav.privacy">隐私</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-toggle" type="button" id="lang-toggle" aria-label="切换到英文">EN</button>
+      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="切换深浅配色">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="currentColor"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9"/></g></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="hero.eyebrow">macOS 菜单栏工具</p>
+        <h1 data-i18n="hero.title">只让当前窗口<br><span class="accent">是清晰的</span></h1>
+        <p class="lede" data-i18n="hero.lede">
+          打开之后，屏幕上除你正在用的那个窗口之外的一切 —— 其他窗口、桌面、菜单栏 ——
+          都被实时高斯模糊盖住。焦点窗口从洞里透出来，依然可点击、可输入、可交互。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#download" data-i18n="hero.download">下载 macOS 版</a>
+          <a class="btn btn-ghost" href="#how" data-i18n="hero.how">它怎么做到</a>
+        </div>
+        <ul class="hero-facts">
+          <li data-i18n="hero.fact1">需要 macOS 14 及以上</li>
+          <li data-i18n="hero.fact2">画面只在本机内存处理</li>
+          <li data-i18n="hero.fact3">未授权屏幕录制也能用（降级模糊）</li>
+        </ul>
+      </div>
+
+      <div class="hero-demo">
+        <div class="demo" id="demo">
+          <div class="demo-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="demo-hint" data-i18n="demo.hint">点任意一个窗口，看焦点怎么走</span>
+          </div>
+          <div class="demo-screen">
+            <div class="demo-win demo-win--a is-focused" tabindex="0" role="button" aria-label="文稿窗口" data-i18n-attr="aria-label:demo.a.aria">
+              <div class="demo-titlebar"><span class="demo-title">季度总结.md</span></div>
+              <div class="demo-body">
+                <span class="ln w80"></span><span class="ln w60"></span><span class="ln w90"></span>
+                <span class="ln w45"></span><span class="ln w70"></span>
+              </div>
+            </div>
+            <div class="demo-win demo-win--b" tabindex="0" role="button" aria-label="聊天窗口" data-i18n-attr="aria-label:demo.b.aria">
+              <div class="demo-titlebar"><span class="demo-title">团队群聊</span></div>
+              <div class="demo-body">
+                <span class="bubble w55"></span><span class="bubble w70 alt"></span>
+                <span class="bubble w40"></span>
+              </div>
+            </div>
+            <div class="demo-win demo-win--c" tabindex="0" role="button" aria-label="终端窗口" data-i18n-attr="aria-label:demo.c.aria">
+              <div class="demo-titlebar"><span class="demo-title">终端</span></div>
+              <div class="demo-body mono">
+                <span class="ln w65"></span><span class="ln w40"></span><span class="ln w75"></span>
+              </div>
+            </div>
+            <div class="demo-desktop-line"></div>
+          </div>
+          <p class="demo-caption" id="demo-caption">焦点在「季度总结.md」—— 其余全部模糊</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="wrap">
+      <h2 class="section-title" data-i18n="nav.features">特性</h2>
+      <p class="section-lede" data-i18n="features.lede">一个只做一件事的工具：让你只看见正在用的东西。</p>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="6.5" y="7" width="7" height="9" rx="1.5" fill="currentColor" opacity=".35"/><path d="M6 20h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="feat1.title">焦点跟着手走</h3>
+          <p data-i18n="feat1.desc">每帧向窗口服务器问一次「现在该看的是哪个窗口」，洞跟着它走。拖动窗口时全速跟随，松手即静。</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="currentColor"/><g stroke="currentColor" stroke-width="1.7" fill="none" opacity=".7"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="10"/></g></svg>
+          </div>
+          <h3 data-i18n="feat2.title">模糊强度精确可调</h3>
+          <p data-i18n="feat2.desc">自己算高斯模糊，半径 5–60 pt 连续可调，不受系统预设材质档位限制。先给焦点窗口补色再模糊，边缘没有白光晕。</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3 4 6.5v5.2c0 4.4 3.2 7.6 8 9.3 4.8-1.7 8-4.9 8-9.3V6.5L12 3Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.8 12.2l2.4 2.4 4-4.6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 data-i18n="feat3.title">没授权也能用</h3>
+          <p data-i18n="feat3.desc">未授予屏幕录制时自动切到系统模糊后端：强度只能粗调，但效果照样开着。授权之后一秒内切回精确模糊，不用重启。</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2.5" y="5" width="12" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="15" y="10" width="6.5" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.7" opacity=".6"/><path d="M6 17h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="feat4.title">多显示器各自为政</h3>
+          <p data-i18n="feat4.desc">每张屏幕一层覆盖；焦点窗口在哪张屏，洞就挖在哪张屏，其余屏整体模糊。鼠标圆盘只画在光标所在那张屏上。</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 12.5 9.5 18 20 6.5" fill="none" stroke="currentColor" stroke-width="6" opacity=".16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 data-i18n="feat5.title">排除应用</h3>
+          <p data-i18n="feat5.desc">把某个应用加进排除列表，它的窗口就永远保持清晰，与焦点在哪无关。从它切到别的窗口时，两边都清晰，其余照旧模糊。</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13 2.5 5.5 13.5H11l-1 8 8.5-11.5H13l1-8Z" fill="currentColor"/></svg>
+          </div>
+          <h3 data-i18n="feat6.title">没事干就歇着</h3>
+          <p data-i18n="feat6.desc">桌面静止 0.75 秒降频到 30fps，完全静止约 15 秒降到 4fps；没有可聚焦窗口或系统休眠时，截图循环直接停止。</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3.2c-4 0-6.5 2.6-6.5 6.5 0 3.4 1.8 5.4 3 6.3v2.3c0 .8 1.7.8 1.7 0v-.7c.6.1 1.2.2 1.8.2s1.2-.1 1.8-.2v.7c0 .8 1.7.8 1.7 0v-2.3c1.2-.9 3-2.9 3-6.3 0-3.9-2.5-6.5-6.5-6.5Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.5 19.5h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="feat7.title">菜单栏一键开关</h3>
+          <p data-i18n="feat7.desc">常驻菜单栏，左键可设成直接开关模糊、打开设置或弹出菜单；⌘, 打开设置。所有选项都会记住，下次启动照旧。</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+          </div>
+          <h3 data-i18n="feat8.title">只有一个权限</h3>
+          <p data-i18n="feat8.desc">只申请「屏幕录制」。没有辅助功能权限、没有输入监听、不联网。画面在本机内存里处理完就丢掉。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="how">
+    <div class="wrap">
+      <h2 class="section-title" data-i18n="nav.how">原理</h2>
+      <p class="section-lede" data-i18n="how.lede">它做的事情很简单：每时每刻盯着你正在用的窗口，把其他一切都糊掉。画面和那个「洞」永远同步，不会闪、也不会错位。</p>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">1</span>
+          <h3 data-i18n="step1.title">找到你正在看的窗口</h3>
+          <p data-i18n="step1.desc">程序会先判断你当前正在用的是哪个窗口——系统弹窗最优先，然后是正在用的这个 App 的窗口。</p>
+        </li>
+        <li class="step">
+          <span class="step-num">2</span>
+          <h3 data-i18n="step2.title">给其余画面拍张照</h3>
+          <p data-i18n="step2.desc">它只给焦点窗口以外的整个画面拍一张照，画面会被自动缩小以省电，焦点窗口本身不会被拍进去。</p>
+        </li>
+        <li class="step">
+          <span class="step-num">3</span>
+          <h3 data-i18n="step3.title">先补色，再模糊</h3>
+          <p data-i18n="step3.desc">先用周围的颜色把焦点窗口的边缘补好，再做整体模糊。这样窗口周围不会出现一圈刺眼的白边。</p>
+        </li>
+        <li class="step">
+          <span class="step-num">4</span>
+          <h3 data-i18n="step4.title">留一个清楚的「洞」</h3>
+          <p data-i18n="step4.desc">在模糊层上给焦点窗口挖一个透明的洞，窗口本身始终保持清晰，而且照常可点、可打字。</p>
+        </li>
+      </ol>
+
+      <div class="note">
+        <h3 data-i18n="how.note.title">两个小细节</h3>
+        <ul>
+          <li data-i18n="how.note.li1"><strong>窗沿描边</strong>：焦点窗口在模糊背景上边界不清，所以我们在它周围描了一圈淡边，还会根据背景深浅自动选黑或白——即使白窗口贴在白背景上，也看得清轮廓。</li>
+          <li data-i18n="how.note.li2"><strong>多个「洞」不打架</strong>：当鼠标、排除列表里的 App 也要保持清晰时，我们会先把它们合并成一个区域再挖洞，重叠的地方不会被重新糊回去。</li>
+        </ul>
+      </div>
+
+      <div class="grid grid-2 backends">
+        <article class="card">
+          <p class="tag" data-i18n="be.default">默认</p>
+          <h3 data-i18n="be1.title">精确模糊（需授权）</h3>
+          <p data-i18n="be1.desc">截屏后用更精细的方式做模糊，强度可以随意调节。需要你授予「屏幕录制」权限。</p>
+        </article>
+        <article class="card">
+          <p class="tag" data-i18n="be.fallback">降级</p>
+          <h3 data-i18n="be2.title">系统模糊（免授权）</h3>
+          <p data-i18n="be2.desc">没授权时也照样能用：用系统自带的模糊把背景糊上，不需要任何权限。区别只是强度只能粗略调节。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="privacy">
+    <div class="wrap privacy">
+      <div class="privacy-copy">
+        <h2 class="section-title" data-i18n="privacy.title">隐私承诺</h2>
+        <p class="section-lede" data-i18n="privacy.lede">一个用来遮住屏幕的工具，自己首先得经得起看。</p>
+        <ul class="checks">
+          <li data-i18n="privacy.check1">画面只在本机内存中处理，不保存、不写盘、不上传</li>
+          <li data-i18n="privacy.check2">不申请辅助功能权限，不监听键盘输入</li>
+          <li data-i18n="privacy.check3">不做网络请求，没有遥测、没有统计</li>
+          <li data-i18n="privacy.check4">唯一需要的权限是「屏幕录制」，且只是它</li>
+        </ul>
+      </div>
+      <figure class="privacy-art" aria-hidden="true">
+        <div class="privacy-art-inner">
+          <div class="pa-window"></div>
+          <div class="pa-window ghost"></div>
+          <div class="pa-window ghost"></div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="faq">
+    <div class="wrap">
+      <h2 class="section-title" data-i18n="nav.faq">常见问题</h2>
+      <div class="faq">
+        <details>
+          <summary data-i18n="faq1.q">为什么第一次启用要授权「屏幕录制」？</summary>
+          <p data-i18n="faq1.a">精确模糊来自对屏幕画面的截图。不授权就得不到像素，只能退回系统合成的模糊 —— 效果还在，但强度只能粗调。授权后一秒内自动切回精确模糊。</p>
+        </details>
+        <details>
+          <summary data-i18n="faq2.q">模糊的地方还能点得到吗？</summary>
+          <p data-i18n="faq2.a">能。覆盖层不接收鼠标事件，这是刻意的：焦点窗口必须保持可交互。如果你需要背景完全点不到，那就要让覆盖层接收事件，代价是连焦点窗口一起挡住。当前版本选择保持焦点窗口可交互。</p>
+        </details>
+        <details>
+          <summary data-i18n="faq3.q">为什么有些系统界面没有被模糊？</summary>
+          <p data-i18n="faq3.a">「菜单栏与 Dock 保持清晰」默认开启，此时覆盖层降到系统界面之下，层级比菜单栏更高的东西（弹出菜单、通知、输入法候选栏、Spotlight）会一并露出来。关掉这个选项即可让覆盖层回到最高层，把它们一起糊上。</p>
+        </details>
+        <details>
+          <summary data-i18n="faq4.q">全屏看视频时会怎么样？</summary>
+          <p data-i18n="faq4.a">焦点窗口铺满整块屏幕时，该屏停止模糊并停止截图 —— 屏幕上已经没有需要藏起来的东西了，省下的算力直接还给你。</p>
+        </details>
+        <details>
+          <summary data-i18n="faq5.q">和 HazeOver 有什么区别？</summary>
+          <p data-i18n="faq5.a">它用「模糊」而不是「变暗」：背景内容还在，只是认不出来。另外模糊半径连续可调，有未授权时的降级路径，排除应用是「窗口始终清晰」而不是「前台时整体待机」。</p>
+        </details>
+        <details>
+          <summary data-i18n="faq6.q">以后怎么更新？</summary>
+          <p data-i18n="faq6.a">v0.2.0 起会接入自动更新（Sparkle 2）：菜单栏里点「检查更新…」即可，安装包经过 Developer ID 签名与 Apple 公证。之前的版本可在官网下载区重新获取安装包。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section download" id="download">
+    <div class="wrap download-inner">
+      <div class="download-copy">
+        <h2 class="section-title" data-i18n="nav.download">下载</h2>
+        <p class="section-lede" data-i18n="download.lede">当前版本 <strong>v0.1.0</strong>。需要 macOS 14 及以上，Apple Silicon 与 Intel 通用包。</p>
+        <div class="hero-actions">
+          <!-- TODO: 替换为官方托管下载地址（.dmg 的 URL；自动更新走 appcast.xml） -->
+          <a class="btn btn-primary" href="https://focalveil.app/download" data-i18n="download.trial">下载试用版</a>
+          <a class="btn btn-ghost" href="pricing.html" data-i18n="download.pricing">查看定价</a>
+        </div>
+        <ol class="install">
+          <li data-i18n="download.install1">下载 <code>.dmg</code>（或 <code>.zip</code>），把「凝焦」拖进「应用程序」。</li>
+          <li data-i18n="download.install2">首次打开若被 Gatekeeper 拦下，在访达里右键点击它，选择「打开」。</li>
+          <li data-i18n="download.install3">点菜单栏图标，选择「启用隐私模糊」，按提示授予屏幕录制权限。</li>
+        </ol>
+      </div>
+      <aside class="download-side">
+        <img class="download-icon" src="assets/logo.png" alt="凝焦应用图标" width="128" height="128">
+        <dl class="meta">
+          <div><dt data-i18n="meta.version">版本</dt><dd>0.1.0</dd></div>
+          <div><dt data-i18n="meta.req">系统要求</dt><dd>macOS 14+</dd></div>
+          <div><dt data-i18n="meta.arch">架构</dt><dd>通用（arm64 / x86_64）</dd></div>
+          <div><dt data-i18n="meta.perm">权限</dt><dd>屏幕录制（可选）</dd></div>
+          <div><dt data-i18n="meta.price">价格</dt><dd>$6.99 · 7 天试用</dd></div>
+        </dl>
+        <p class="update-note" data-i18n="download.updateNote">自动更新随 v0.2.0 上线，之后菜单栏「检查更新…」即可升级。</p>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img class="brand-icon" src="assets/icon.png" alt="" width="28" height="28">
+      <span>凝焦 · FocalVeil</span>
+    </div>
+    <nav class="footer-links" aria-label="页脚链接">
+      <a href="index.html" data-i18n="footer.home">首页</a>
+      <a href="pricing.html" data-i18n="footer.pricing">定价</a>
+      <a href="privacy.html" data-i18n="footer.privacyPolicy">隐私政策</a>
+      <a href="appcast.xml">appcast</a>
+    </nav>
+    <p class="footer-note" data-i18n="footer.note">画面只在本机处理。本站不收集任何访问数据。</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
