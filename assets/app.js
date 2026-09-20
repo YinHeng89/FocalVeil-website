@@ -218,10 +218,10 @@
       "theme.toLight": "Switch to light theme",
       "theme.toDark": "Switch to dark theme",
 
-      "title.home": "FocalVeil — keep only the active window sharp",
+      "title.home": "FocalVeil — Make the focused window clear, and let the rest of the world fade away.",
       "meta.home": "A macOS menu-bar utility that keeps only your focused window sharp and live-blurs everything else with a Gaussian blur. All frames are processed in local memory — never saved, never uploaded.",
       "hero.eyebrow": "macOS menu-bar utility",
-      "hero.title": "Keep only the active window<br><span class=\"accent\">sharp</span>",
+      "hero.title": "Make the focused window clear, <br><span class=\"accent\">and let the rest of the world fade away.</span>",
       "hero.lede": "Once on, everything on screen except the window you're using — other windows, the desktop, the menu bar — is covered by a live Gaussian blur. The focused window shows through the hole, still clickable, typeable, and interactive.",
       "hero.download": "Download for macOS",
       "hero.how": "How it works",
