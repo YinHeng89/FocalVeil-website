@@ -1,32 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  appcast.xml — Sparkle 更新源，部署到 https://focalveil.com/appcast.xml
-
-  这是本地占位文件，目的是让官网链接不再 404。它只描述「当前已发布的最新版」
-  （与 Info.plist 中的 CFBundleShortVersionString / CFBundleVersion 一致），
-  因此已安装该版本的用户点击「检查更新」会得到「已是最新版本」。
-
-  真正的、带 edDSA 签名与增量补丁的 appcast 由 CI（.github/workflows/release.yml）
-  在每次打 tag 时通过 Sparkle 的 generate_appcast 生成，并写回 website/appcast.xml
-  提交、随官网发布，覆盖本占位内容。下载地址即 <enclosure url>，可指向 GitHub
-  Releases 资源或自有 CDN，随时可在 appcast 中改。
--->
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <channel>
-    <title>凝焦</title>
-    <description>凝焦 自动更新源</description>
-    <language>zh</language>
-    <item>
-      <title>0.1.39</title>
-      <description>新增在线更新功能！</description>
-      <sparkle:version>40</sparkle:version>
-      <sparkle:shortVersionString>0.1.39</sparkle:shortVersionString>
-      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-      <!-- 与当前已发布版本一致，已安装用户不会触发下载；发布新版时由 CI 替换本条目。 -->
-      <enclosure url="https://focalveil.com/downloads/FocalVeil-0.1.39.zip"
-                sparkle:edSignature=""
-                length="0"
-                type="application/octet-stream"/>
-    </item>
-  </channel>
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>FocalVeil</title>
+        <item>
+            <title>0.1.40</title>
+            <pubDate>Mon, 21 Sep 2026 11:50:15 +0800</pubDate>
+            <link>https://focalveil.com</link>
+            <sparkle:version>41</sparkle:version>
+            <sparkle:shortVersionString>0.1.40</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://focalveil.com/downloads/FocalVeil-0.1.40.zip" length="2871207" type="application/octet-stream" sparkle:edSignature="+HVHVfJ9aPiw7fCsxY7Rmutt+QN1gYFcKHBzrm6Sf+pQbZYPbCzBNgSMseiJiFykGR4yIFtW2NEhyyvsV0K+CA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://focalveil.com/downloads/FocalVeil41-40.delta" sparkle:deltaFrom="40" length="2722" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976240" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wifrEbwexCtSBJCfwTZQvjUOmvdgrEsCLJmdsdIP6sNa+5/qqiSFRXmTILfvuuMl9E0VOpNBhoJCqQ3BQOs1Aw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.39</title>
+            <pubDate>Mon, 21 Sep 2026 11:46:11 +0800</pubDate>
+            <link>https://focalveil.com</link>
+            <sparkle:version>40</sparkle:version>
+            <sparkle:shortVersionString>0.1.39</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://focalveil.com/downloads/FocalVeil-0.1.39.zip" length="2871217" type="application/octet-stream" sparkle:edSignature="CI+t+/dHswwQGltTDjjTkpscUjjHouKU4jeGRJRevfuFyCKt0THGnRZywk//3+Z8bkNEb7027Z5pzmBS0f73Bg=="/>
+        </item>
+    </channel>
 </rss>
