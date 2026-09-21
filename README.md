@@ -35,7 +35,7 @@
 
 ## 下载与安装
 
-当前版本 **v0.1.41**。
+当前版本 **v0.1.42**。
 
 1. 从 [官网下载页](https://yinheng89.github.io/FocalVeil-website/index.html#download) 下载 `.dmg`（或 `.zip`）。
 2. 把「凝焦」拖进「应用程序」。
