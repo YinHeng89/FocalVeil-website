@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      try {
+        var s = window.localStorage.getItem('fv-lang');
+        var nav = (window.navigator.language || 'en').toLowerCase();
+        var lang = (s === 'en' || s === 'zh') ? s : (/^zh/.test(nav) ? 'zh' : 'en');
+        document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+        document.documentElement.classList.add('i18n-loading');
+        setTimeout(function () { document.documentElement.classList.remove('i18n-loading'); }, 2000);
+      } catch (e) {}
+    })();
+  </script>
 <title data-i18n="title.pricing">定价 — 凝焦 FocalVeil</title>
-<meta name="description" data-i18n-attr="content:meta.pricing" content="凝焦 FocalVeil 定价：7 天免费试用，当前版本一次性买断 $6.99，无订阅、无广告。">
+<meta name="description" data-i18n-attr="content:meta.pricing" content="FocalVeil 定价：基础版 $6.99、PRO 版 $14.99，均为当前大版本一次性买断，无订阅、无广告。">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
@@ -41,65 +53,68 @@
   <section class="subhero">
     <div class="wrap">
       <p class="eyebrow" data-i18n="nav.pricing">定价</p>
-      <h1 data-i18n="pricing.title">一个价格，<span class="accent">当前版本永久</span></h1>
-      <p class="lede" data-i18n="pricing.lede">7 天全功能免费试用，无需付款。满意了再买断 —— 一次付费，当前大版本内永久使用、永久更新。无订阅、无广告、无套路。</p>
+      <h1 data-i18n="pricing.title">基础版免费，<span class="accent">PRO 一次买断永久使用</span></h1>
+      <p class="lede" data-i18n="pricing.lede">基础版完全免费，下载即用，已含核心模糊功能；PRO 版一次性买断，额外解锁全部高级功能。无订阅、无广告、无套路。</p>
 
-      <div class="price-card">
-        <div class="price-row">
-          <span class="price-cur">$</span>
-          <span class="price">6.99</span>
+      <div class="price-grid">
+        <div class="price-card">
+          <p class="plan-name" data-i18n="plan.basic">基础版</p>
+          <div class="price-row">
+            <span class="price" data-i18n="plan.basic.price">免费</span>
+          </div>
+          <p class="price-sub" data-i18n="pricing.basicSub">核心功能 · 永久免费</p>
+          <div class="buy-row">
+            <a class="btn btn-primary" href="https://focalveil.com/downloads/FocalVeil-0.1.41.zip" data-i18n="download.btn">下载 macOS 版</a>
+            <a class="btn btn-ghost" href="index.html#features" data-i18n="pricing.features">功能介绍</a>
+          </div>
+          <p class="buy-note" data-i18n="pricing.basicNote">免费下载，无需购买</p>
         </div>
-        <p class="price-sub" data-i18n="pricing.priceSub">当前大版本永久授权 · 含该版本全部免费更新</p>
-        <div class="buy-row">
-          <!--
-            Paddle 接入：把下面 href 里的 REPLACE_WITH_PADDLE_PRODUCT_ID 换成你在 Paddle 后台创建的产品的 ID。
-            可选：引入 https://cdn.paddle.com/paddle/v2/paddle.js，并用
-              Paddle.Setup({ vendor: VENDOR_ID });
-              Paddle.Checkout.open({ product: PRODUCT_ID });
-            实现站内弹窗结账，替代直接跳转链接。
-          -->
-          <a class="btn btn-primary" href="https://checkout.paddle.com/checkout/REPLACE_WITH_PADDLE_PRODUCT_ID" id="buy-btn" data-i18n="pricing.buy">立即购买</a>
-          <a class="btn btn-ghost" href="purchase.html" data-i18n="pricing.activate">如何激活</a>
+
+        <div class="price-card price-card--pro">
+          <p class="plan-name" data-i18n="plan.pro.name">PRO 版</p>
+          <div class="price-row">
+            <span class="price-cur">$</span>
+            <span class="price">14.99</span>
+          </div>
+          <p class="price-sub" data-i18n="pricing.proSub">全部高级功能 · 当前大版本永久</p>
+          <div class="buy-row">
+            <!--
+              Paddle 接入：把下面 href 里的 REPLACE_WITH_PADDLE_PRO_PRODUCT_ID 换成你在 Paddle 后台创建的「PRO 版」产品 ID。
+            -->
+            <a class="btn btn-primary" href="https://checkout.paddle.com/checkout/REPLACE_WITH_PADDLE_PRO_PRODUCT_ID" id="buy-pro-btn" data-i18n="plan.pro.buy">购买 PRO 版</a>
+            <a class="btn btn-ghost" href="purchase.html" data-i18n="pricing.activate">如何激活</a>
+          </div>
+          <p class="buy-note" data-i18n="pricing.proNote">解锁全部高级功能</p>
         </div>
-        <p class="buy-note" data-i18n="pricing.buyNote"><strong>首发 2 周 $4.99 优惠价</strong> · 7 天免费试用，先试后买</p>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <h2 class="section-title" data-i18n="pricing.inclTitle">包含什么</h2>
-      <p class="section-lede" data-i18n="pricing.inclLede">试用版与买断版功能完全一致 —— 区别只是试用期结束后是否付费。</p>
-      <div class="grid grid-3">
+      <h2 class="section-title" data-i18n="pricing.cmpTitle">功能对比</h2>
+      <p class="section-lede" data-i18n="pricing.cmpLede">基础版包含核心功能；PRO 版额外解锁以下高级功能。</p>
+      <div class="grid grid-2">
         <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="6.5" y="7" width="7" height="9" rx="1.5" fill="currentColor" opacity=".35"/><path d="M6 20h12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
-          <h3 data-i18n="incl1.title">焦点实时跟随</h3>
-          <p data-i18n="incl1.desc">每帧向窗口服务器问一次「现在该看的是哪个窗口」，洞跟着它走。拖动时全速跟随，松手即静。</p>
+          <h3 data-i18n="cmp.basicTitle">基础版包含</h3>
+          <ul class="feat-list">
+            <li data-i18n="cmp.basic.1">焦点窗口实时跟随</li>
+            <li data-i18n="cmp.basic.2">开箱即用的模糊（固定强度预设）</li>
+            <li data-i18n="cmp.basic.3">未授权也能用（系统降级模糊）</li>
+            <li data-i18n="cmp.basic.4">多显示器各自独立</li>
+            <li data-i18n="cmp.basic.5">完全离线、仅一个权限</li>
+          </ul>
         </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="currentColor"/><g stroke="currentColor" stroke-width="1.7" fill="none" opacity=".7"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="10"/></g></svg></div>
-          <h3 data-i18n="incl2.title">模糊强度精调</h3>
-          <p data-i18n="incl2.desc">自己算高斯模糊，半径 5–60 pt 连续可调；先给焦点窗口补色再模糊，边缘没有白光晕。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3 4 6.5v5.2c0 4.4 3.2 7.6 8 9.3 4.8-1.7 8-4.9 8-9.3V6.5L12 3Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.8 12.2l2.4 2.4 4-4.6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <h3 data-i18n="incl3.title">未授权也能用</h3>
-          <p data-i18n="incl3.desc">未授予屏幕录制时自动切到系统模糊后端，效果照样开着；授权后一秒内切回精确模糊。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2.5" y="5" width="12" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="15" y="10" width="6.5" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.7" opacity=".6"/><path d="M6 17h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
-          <h3 data-i18n="incl4.title">多屏与排除应用</h3>
-          <p data-i18n="incl4.desc">每张屏幕独立控制；把某个应用加进排除列表，它的窗口永远保持清晰，与焦点无关。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13 2.5 5.5 13.5H11l-1 8 8.5-11.5H13l1-8Z" fill="currentColor"/></svg></div>
-          <h3 data-i18n="incl5.title">鼠标聚光</h3>
-          <p data-i18n="incl5.desc">鼠标周围保持清晰、四周模糊，做演示或录屏时让观众一眼看到你指的地方。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></div>
-          <h3 data-i18n="incl6.title">只有一个权限</h3>
-          <p data-i18n="incl6.desc">只申请「屏幕录制」，没有辅助功能权限、没有输入监听、不联网。画面在本机内存里处理完就丢掉。</p>
+        <article class="card card--pro">
+          <h3 data-i18n="cmp.proTitle">PRO 版额外包含</h3>
+          <ul class="feat-list">
+            <li data-i18n="cmp.pro.1">模糊半径连续可调（5–60 pt）</li>
+            <li data-i18n="cmp.pro.2">自定义模糊颜色</li>
+            <li data-i18n="cmp.pro.3">颜色强度可调</li>
+            <li data-i18n="cmp.pro.4">鼠标聚光（光标周围清晰）</li>
+            <li data-i18n="cmp.pro.5">菜单栏 / Dock 清晰控制</li>
+            <li data-i18n="cmp.pro.6">应用白名单（排除应用始终清晰）</li>
+          </ul>
         </article>
       </div>
     </div>
@@ -110,8 +125,8 @@
       <h2 class="section-title" data-i18n="nav.faq">常见问题</h2>
       <div class="faq">
         <details>
-          <summary data-i18n="pfaq1.q">试用需要付款吗？</summary>
-          <p data-i18n="pfaq1.a">不需要。下载后 7 天全功能免费试用，无需绑定信用卡。试用期结束后模糊功能停止，仅保留基础菜单，你随时可以购买恢复。</p>
+          <summary data-i18n="pfaq1.q">基础版和 PRO 版有什么区别？</summary>
+          <p data-i18n="pfaq1.a">基础版已包含日常所需的核心模糊功能（焦点跟随、开箱即用模糊、免授权可用、多显示器、仅一个权限）。PRO 版在基础版之上额外解锁全部高级功能：模糊半径 / 颜色 / 强度可调、鼠标聚光、菜单栏与 Dock 清晰控制、应用白名单。两者均为当前大版本一次性买断。</p>
         </details>
         <details>
           <summary data-i18n="pfaq2.q">买断包含未来的大版本吗？</summary>
@@ -128,6 +143,10 @@
         <details>
           <summary data-i18n="pfaq5.q">和订阅制比有什么好处？</summary>
           <p data-i18n="pfaq5.a">一次付费、永久使用，不会被每月扣费；我们也没有持续从你身上抽成的动机，更新与否都随你。对独立开发者工具而言，这是更诚实的商业模式。</p>
+        </details>
+        <details>
+          <summary data-i18n="pfaq6.q">可以先买基础版，以后升级到 PRO 吗？</summary>
+          <p data-i18n="pfaq6.a">可以。之后随时在应用内升级到 PRO，只需补差价（具体以购买页为准），已激活的基础版许可不受影响。</p>
         </details>
       </div>
     </div>

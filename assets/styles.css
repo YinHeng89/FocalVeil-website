@@ -534,6 +534,37 @@ details p { margin: 0 0 16px; color: var(--text-2); font-size: 15px; max-width: 
 .buy-note { text-align: center; color: var(--text-3); font-size: 13px; margin: 14px 0 0; }
 .buy-note strong { color: var(--text); }
 
+/* two-tier pricing */
+.price-grid {
+  display: grid; gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 760px; margin: 0 auto;
+}
+.price-card--pro { border-color: var(--accent); box-shadow: 0 24px 60px var(--accent-glow); }
+.plan-name { margin: 0 0 12px; text-align: center; font-size: 16px; font-weight: 700; letter-spacing: 0.02em; }
+.plan-tag {
+  display: inline-block; margin: 0 0 10px; padding: 3px 12px;
+  border-radius: 999px; background: var(--accent); color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.05em;
+}
+.plan-tag--wrap { text-align: center; }
+
+.card--pro { border-color: var(--accent); }
+.feat-list { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+.feat-list li { position: relative; padding-left: 26px; color: var(--text-2); font-size: 14.5px; }
+.feat-list li::before {
+  content: ""; position: absolute; left: 4px; top: 9px;
+  width: 10px; height: 6px; border-left: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent); transform: rotate(-45deg);
+}
+
+/* hide body until i18n has applied, to avoid a flash of the wrong language */
+html.i18n-loading body { visibility: hidden; }
+
+@media (max-width: 720px) {
+  .price-grid { grid-template-columns: minmax(0, 1fr); max-width: 460px; }
+}
+
 .legal { max-width: 780px; margin-inline: auto; }
 .legal .updated { color: var(--text-3); font-size: 14px; margin: 4px 0 28px; }
 .legal h2 { font-size: 21px; margin: 34px 0 12px; letter-spacing: -0.01em; }

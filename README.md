@@ -57,7 +57,7 @@
 
 ## 价格
 
-$6.99，含 7 天免费试用。定价细节见 [定价页](https://yinheng89.github.io/FocalVeil-website/pricing.html)。
+基础版免费 / PRO $14.99（当前大版本一次性买断，无订阅；基础版免费且永久可用）。基础版含核心功能，PRO 版含全部高级功能。定价细节见 [定价页](https://yinheng89.github.io/FocalVeil-website/pricing.html)。
 
 ## 常见问题
 

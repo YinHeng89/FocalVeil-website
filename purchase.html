@@ -1,8 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      try {
+        var s = window.localStorage.getItem('fv-lang');
+        var nav = (window.navigator.language || 'en').toLowerCase();
+        var lang = (s === 'en' || s === 'zh') ? s : (/^zh/.test(nav) ? 'zh' : 'en');
+        document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+        document.documentElement.classList.add('i18n-loading');
+        setTimeout(function () { document.documentElement.classList.remove('i18n-loading'); }, 2000);
+      } catch (e) {}
+    })();
+  </script>
 <title data-i18n="title.purchase">购买与激活 — 凝焦 FocalVeil</title>
 <meta name="description" data-i18n-attr="content:meta.purchase" content="如何购买凝焦 FocalVeil、用 license key 激活，以及退款与 license 绑定说明。">
 <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -45,7 +57,7 @@
       <p class="lede" data-i18n="purchase.lede">通过 Paddle 结账，邮箱收 key，在设置里粘贴即可。无需注册账号，无需辅助功能权限。</p>
       <div class="hero-actions" style="justify-content:center">
         <a class="btn btn-primary" href="pricing.html" data-i18n="purchase.gotoBuy">前往购买</a>
-        <a class="btn btn-ghost" href="index.html#download" data-i18n="purchase.tryFirst">先下载试用</a>
+        <a class="btn btn-ghost" href="index.html#download" data-i18n="purchase.download">下载基础版</a>
       </div>
     </div>
   </section>
