@@ -1,6 +1,8 @@
 # 凝焦 FocalVeil
 
-> 让焦点窗口清晰，让其余世界隐去。，其余一切实时模糊 —— 你的屏幕，只为正在看的那个窗口而亮。
+> 让焦点窗口清晰，让其余世界隐去。其余一切实时模糊 —— 你的屏幕，只为正在看的那个窗口而亮。
+
+🌐 官方网站：[focalveil.com](https://focalveil.com/) · 📦 下载：[focalveil.com/#download](https://focalveil.com/#download) · 💬 定价：[focalveil.com/pricing.html](https://focalveil.com/pricing.html)
 
 **凝焦（FocalVeil）** 是一款常驻 macOS 菜单栏的小工具。打开之后，屏幕上除你正在使用的那个窗口之外的一切——其他窗口、桌面、菜单栏、Dock——都会被实时模糊盖住。你专注的窗口从「模糊层」的洞里透出来，依然可以点击、输入、交互。
 
@@ -37,7 +39,7 @@
 
 当前版本 **v0.1.44**。
 
-1. 从 [官网下载页](https://yinheng89.github.io/FocalVeil-website/index.html#download) 下载 `.dmg`（或 `.zip`）。
+1. 从 [官网下载页](https://focalveil.com/#download) 下载 `.dmg`（或 `.zip`）。
 2. 把「凝焦」拖进「应用程序」。
 3. 首次打开若被系统拦下，在访达里右键点击它，选择「打开」。
 4. 点菜单栏图标，选择「启用隐私模糊」，按提示授予屏幕录制权限即可。
@@ -53,11 +55,11 @@
 - 不做任何网络请求，没有遥测、没有统计。
 - 唯一需要的权限是「屏幕录制」，且只是它。
 
-详细的隐私说明见 [隐私政策](https://yinheng89.github.io/FocalVeil-website/privacy.html)。
+详细的隐私说明见 [隐私政策](https://focalveil.com/privacy.html)。
 
 ## 价格
 
-基础版免费 / PRO $14.99（当前大版本一次性买断，无订阅；基础版免费且永久可用）。基础版含核心功能，PRO 版含全部高级功能。定价细节见 [定价页](https://yinheng89.github.io/FocalVeil-website/pricing.html)。
+基础版免费 / PRO $14.99（当前大版本一次性买断，无订阅；基础版免费且永久可用）。基础版含核心功能，PRO 版含全部高级功能。定价细节见 [定价页](https://focalveil.com/pricing.html)。
 
 ## 常见问题
 
