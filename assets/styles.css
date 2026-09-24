@@ -422,6 +422,13 @@ html[data-theme="light"] .demo-screen {
 /* ---------- faq ---------- */
 
 .faq { display: grid; gap: 12px; }
+.faq-cta {
+  display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center;
+  margin-top: 26px; padding: 18px 22px;
+  border: 1px solid var(--line-strong); border-radius: var(--radius);
+  background: var(--bg-elev);
+}
+.faq-cta span { color: var(--text-2); font-size: 15px; }
 details {
   border-radius: var(--radius-sm);
   border: 1px solid var(--line);
