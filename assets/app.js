@@ -550,9 +550,8 @@
 
   var storedTheme = null;
   try { storedTheme = window.localStorage.getItem(THEME_KEY); } catch (e) {}
-  if (storedTheme === "dark" || storedTheme === "light") {
-    applyTheme(storedTheme);
-  } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+  // 默认深色模式：仅当用户显式保存过浅色偏好时才用浅色，不再跟随系统配色。
+  if (storedTheme === "light") {
     applyTheme("light");
   }
 

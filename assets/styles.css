@@ -203,6 +203,11 @@ html[data-theme="light"] .icon-moon { display: none; }
   content: ""; width: 5px; height: 5px; border-radius: 50%;
   background: var(--accent);
 }
+.footer-badge {
+  display: inline-flex; line-height: 0; margin: 0 0 0 auto;
+  transition: opacity .16s ease;
+}
+.footer-badge:hover { opacity: .85; }
 
 /* ---------- demo ---------- */
 
@@ -490,6 +495,7 @@ details p { margin: 0 0 16px; color: var(--text-2); font-size: 15px; max-width: 
 .footer-links { display: flex; gap: 20px; font-size: 14.5px; color: var(--text-2); }
 .footer-links a:hover { color: var(--text); }
 .footer-note { width: 100%; margin: 6px 0 0; color: var(--text-3); font-size: 13px; }
+.footer-inner .footer-badge { margin: 0 0 0 auto; }
 
 /* ---------- responsive ---------- */
 
