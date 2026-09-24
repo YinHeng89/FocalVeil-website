@@ -116,7 +116,7 @@
       "meta.arch.val": "通用（arm64 / x86_64）",
       "meta.perm.val": "屏幕录制（可选）",
       "meta.price.val": "基础版 免费 · PRO 限时免费",
-      "download.updateNote": "自动更新随 v0.2.0 上线，之后菜单栏「检查更新…」即可升级。",
+      "download.updateNote": "自动更新随 v0.2.0 上线，当前版本请手动「检查更新…」。",
 
       "title.pricing": "定价 — 凝焦 FocalVeil",
       "meta.pricing": "FocalVeil 定价：基础版免费，PRO 版限时免费，无订阅、无广告。",
@@ -323,7 +323,7 @@
       "meta.arch.val": "Universal (arm64 / x86_64)",
       "meta.perm.val": "Screen Recording (optional)",
       "meta.price.val": "Basic Free · PRO Limited-time Free",
-      "download.updateNote": "Automatic updates land with v0.2.0; after that, “Check for Updates…” in the menu bar upgrades you.",
+      "download.updateNote": "Automatic updates land with v0.2.0; for the current version, please use “Check for Updates…” manually.",
 
       "title.pricing": "Pricing — FocalVeil",
       "meta.pricing": "FocalVeil pricing: Basic is free, PRO is free for a limited time. No subscription, no ads.",
