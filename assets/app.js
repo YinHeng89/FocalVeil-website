@@ -159,8 +159,8 @@
       "pfaq4.a": "支持 14 天无理由退款，由 Paddle 统一处理。若不满意，联系我们或 Paddle 即可办理，无需说明理由。",
       "pfaq5.q": "和订阅制比有什么好处？",
       "pfaq5.a": "一次付费、永久使用，不会被每月扣费；我们也没有持续从你身上抽成的动机，更新与否都随你。对独立开发者工具而言，这是更诚实的商业模式。",
-      "pfaq6.q": "可以先买基础版，以后升级到 PRO 吗？",
-      "pfaq6.a": "可以。之后随时在应用内升级到 PRO，只需补差价（具体以购买页为准），已激活的基础版许可不受影响。",
+      "pfaq6.q": "需要先下载基础版，再升级到 PRO 吗？",
+      "pfaq6.a": "不需要。基础版本身永久免费，下载即用；PRO 目前限时免费，下载后在「菜单栏 → 升级 / 激活」里一键领取全部功能即可，无需任何付费或补差价。",
 
       "title.privacy": "隐私政策 — 凝焦 FocalVeil",
       "meta.privacy": "FocalVeil 隐私政策：画面仅在本机内存处理，不保存、不上传，无任何遥测。",
@@ -365,6 +365,8 @@
       "pfaq4.a": "A 14-day no-questions-asked refund is supported, handled by Paddle. If you're not satisfied, contact us or Paddle — no reason needed.",
       "pfaq5.q": "What's the advantage over a subscription?",
       "pfaq5.a": "One payment, permanent use, no monthly charge — and we have no incentive to keep taking a cut from you, so updates are entirely your call. For an indie developer tool, that's the more honest business model.",
+      "pfaq6.q": "Do I need to download Basic first, then upgrade to PRO?",
+      "pfaq6.a": "No. Basic is free forever — download and use it right away. PRO is currently free for a limited time: after downloading, just claim all features with one tap in “Menu bar → Upgrade / Activate”. No payment and no price difference needed.",
 
       "title.privacy": "Privacy Policy — FocalVeil",
       "meta.privacy": "FocalVeil privacy policy: frames are processed only in local memory, never saved or uploaded, with no telemetry.",
