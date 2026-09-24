@@ -1,0 +1,82 @@
+name: Bug report
+description: 报告一个可复现的问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量填全信息，方便我们复现与修复。
+  - type: dropdown
+    id: macos
+    attributes:
+      label: macOS 版本
+      options:
+        - "Sequoia 15"
+        - "Sonoma 14"
+        - "Ventura 13"
+        - "其他（请在描述中说明）"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: FocalVeil 版本
+      options:
+        - "0.1.44"
+        - "0.1.x（旧版）"
+        - "不确定"
+    validations:
+      required: true
+  - type: dropdown
+    id: edition
+    attributes:
+      label: 版本类型
+      options:
+        - "PRO 版"
+        - "基础版（免费）"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 问题描述
+      description: 发生了什么异常？
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+    validations:
+      required: false
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: 截图 / 日志（可选）
+      description: 可粘贴截图链接或菜单栏「导出日志」的内容。
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 自检
+      options:
+        - label: 我已搜索 FAQ 与已有 issues，确认不是重复问题
+        - label: 已授予「屏幕录制」权限（如涉及模糊效果问题）

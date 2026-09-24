@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "其他问题 / 一般咨询"
+    url: "https://github.com/YinHeng89/FocalVeil-website/issues"
+    about: "使用疑问、授权、购买等非 Bug / 功能类反馈，直接在此开 issue 即可。"
