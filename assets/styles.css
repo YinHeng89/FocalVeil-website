@@ -542,6 +542,9 @@ details p { margin: 0 0 16px; color: var(--text-2); font-size: 15px; max-width: 
 .price-row { display: flex; align-items: baseline; justify-content: center; gap: 8px; margin: 0 0 6px; }
 .price { font-size: 52px; font-weight: 700; letter-spacing: -0.03em; }
 .price-cur { font-size: 24px; color: var(--text-2); font-weight: 600; }
+/* limited-time free: strike through the old price, keep it visible */
+.price-old { color: var(--text-3); text-decoration: line-through; text-decoration-color: var(--danger, #e5484d); text-decoration-thickness: 2px; }
+.price-old-cur { color: var(--text-3); text-decoration: line-through; text-decoration-color: var(--danger, #e5484d); text-decoration-thickness: 2px; }
 .price-sub { text-align: center; color: var(--text-3); font-size: 14px; margin: 0 0 22px; }
 .buy-row { display: flex; flex-direction: column; gap: 10px; align-items: stretch; }
 .buy-row .btn { justify-content: center; }
@@ -554,7 +557,16 @@ details p { margin: 0 0 16px; color: var(--text-2); font-size: 15px; max-width: 
   grid-template-columns: repeat(2, minmax(0, 1fr));
   max-width: 760px; margin: 0 auto;
 }
-.price-card--pro { border-color: var(--accent); box-shadow: 0 24px 60px var(--accent-glow); }
+.price-card--pro { position: relative; overflow: hidden; border-color: var(--accent); box-shadow: 0 24px 60px var(--accent-glow); }
+/* diagonal corner ribbon badge */
+.plan-corner-badge {
+  position: absolute; top: 20px; right: -38px; z-index: 2;
+  width: 168px; text-align: center;
+  transform: rotate(45deg);
+  background: var(--accent); color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+  padding: 6px 0; box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
 .plan-name { margin: 0 0 12px; text-align: center; font-size: 16px; font-weight: 700; letter-spacing: 0.02em; }
 .plan-tag {
   display: inline-block; margin: 0 0 10px; padding: 3px 12px;
