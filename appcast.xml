@@ -3,6 +3,22 @@
     <channel>
         <title>FocalVeil</title>
         <item>
+            <title>0.1.49</title>
+            <pubDate>Mon, 26 Oct 2026 14:12:36 +0800</pubDate>
+            <link>https://focalveil.com</link>
+            <sparkle:version>50</sparkle:version>
+            <sparkle:shortVersionString>0.1.49</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://focalveil.com/downloads/FocalVeil-0.1.49.zip" length="3002440" type="application/octet-stream" sparkle:edSignature="73XEwTq7939zl0Shn30cr+QamweDLkilRjDLqf5pBJ0xUMQncMDXrmTWU898TLTVk1r2EWlD9nC7hS07vPs5Dg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://focalveil.com/downloads/FocalVeil50-49.delta" sparkle:deltaFrom="49" length="83502" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976448" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="zYh81+WQhU9zAq2P4EEosnfuB0Ut9amiYGyHMK5mG/l0zqRMV5TH6sE5i2vtLs9Wh4Imoh8hzahVq8bdmzbQDA=="/>
+                <enclosure url="https://focalveil.com/downloads/FocalVeil50-48.delta" sparkle:deltaFrom="48" length="83150" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976448" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="j5oGhmPzLsd4Osza28xdsnHWUO12u71E8NlVAUcnFA7kYKeq7HQ8lEl4dq2A2V//qbWDviNXv1nI+mNlOyu8Cg=="/>
+                <enclosure url="https://focalveil.com/downloads/FocalVeil50-47.delta" sparkle:deltaFrom="47" length="84958" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976448" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="lfPGKFp8i2ugXVSO3Xzir3Hhn/xj8Yp5Y8JfeKJM2QAcKYI4UHbpTaY/H8Fx7V3hpSuB9gs5ss3/jDXGK7/zDQ=="/>
+                <enclosure url="https://focalveil.com/downloads/FocalVeil50-46.delta" sparkle:deltaFrom="46" length="88874" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976448" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="htEX8IcYlT7pE5novWNVcSQNPAK86C9taMRpk1cf6zHO7IxaVIfw2J4XlR7zXWoMOu8XOxI7PFjam3iZWp1iAA=="/>
+                <enclosure url="https://focalveil.com/downloads/FocalVeil50-45.delta" sparkle:deltaFrom="45" length="157378" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976448" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="AlLCgroimZMihi6D5v768VtUg/gF0FO3DyvZbMEdNaxdIrGh8bqnGrDtU562AvmUBrlyWNttzZ9MZY1nhkH2Ag=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.1.48</title>
             <pubDate>Sat, 10 Oct 2026 11:27:43 +0800</pubDate>
             <link>https://focalveil.com</link>
@@ -10,13 +26,6 @@
             <sparkle:shortVersionString>0.1.48</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://focalveil.com/downloads/FocalVeil-0.1.48.zip" length="2996956" type="application/octet-stream" sparkle:edSignature="vA/PS0ztSKvY7OILFlIAC2mPB71GYg8D5fgNpRuGUP5o+wB00UwMORA9q/DEJ+vs/QgO3Llj/KiGrWL9Pyk2Dg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://focalveil.com/downloads/FocalVeil49-48.delta" sparkle:deltaFrom="48" length="33310" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976448" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="G4FNN6j0J68tlh5gWmM66jAT5n7PpuEdRlofigVoai8X/g/9+T/X2ZdYks1CkEbepunmpL1C82jlDUdBql1dBA=="/>
-                <enclosure url="https://focalveil.com/downloads/FocalVeil49-47.delta" sparkle:deltaFrom="47" length="29314" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976448" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="vOM3uvVbGH/I/4Kb7t4vFG7M0B3jukDQ2k+7sAp+fjQZj8VYKSf4fBbtYbYTLq+qk2tZUkMyCm/gvFA/nZqXCw=="/>
-                <enclosure url="https://focalveil.com/downloads/FocalVeil49-46.delta" sparkle:deltaFrom="46" length="62038" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976448" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="l0j6HmqET3+Fu2DlqFV2ibzAitc8XkUhLaqlDxecxBrU+20YxTvXIOSGKKtO6ieDRcC1DB8tViCbOmxWVTUVDw=="/>
-                <enclosure url="https://focalveil.com/downloads/FocalVeil49-45.delta" sparkle:deltaFrom="45" length="145498" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976448" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="WylFhKYOE+8CzfAb8FmIrs1QQ+smFKCYHeYhhPma6L0aV/P10zTYPHGneK+I/FD6C3FQ2vVGv34vlFmjaChWBg=="/>
-                <enclosure url="https://focalveil.com/downloads/FocalVeil49-43.delta" sparkle:deltaFrom="43" length="195114" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976448" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="bat+h1hWONbrJ5ffrxa3G6p2FLGw1+3QAtQxARfcQiXfMKT0XxV1Lr2odqmUNALW1JHE8twkWGOusZvt1lzfAw=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>0.1.47</title>
@@ -26,15 +35,6 @@
             <sparkle:shortVersionString>0.1.47</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <enclosure url="https://focalveil.com/downloads/FocalVeil-0.1.47.zip" length="2997085" type="application/octet-stream" sparkle:edSignature="W3mUicKzTQk3je9Ix/KNDWc5cunVmYJ/z5BLMGRALQanWDc3WtydpY7s2Mr8KWWlDPerMAsAobnEinRpoTrUBQ=="/>
-        </item>
-        <item>
-            <title>0.1.46</title>
-            <pubDate>Sat, 10 Oct 2026 10:47:49 +0800</pubDate>
-            <link>https://focalveil.com</link>
-            <sparkle:version>47</sparkle:version>
-            <sparkle:shortVersionString>0.1.46</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://focalveil.com/downloads/FocalVeil-0.1.46.zip" length="2996926" type="application/octet-stream" sparkle:edSignature="0FvvyPb8WUTStKm0Sanp0hwM4HERtTrJg1/pnS+WQj+etTPxVr98gN0FFlYiUdu78IGBvbe+7tQOvODA5novCQ=="/>
         </item>
     </channel>
 </rss>
