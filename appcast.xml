@@ -9,7 +9,7 @@
             <sparkle:version>56</sparkle:version>
             <sparkle:shortVersionString>0.1.55</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://focalveil.com/downloads/FocalVeil-0.1.55.zip" length="2993636" type="application/octet-stream" sparkle:edSignature="s/Lm+Up5D72R/QezjDuCt5wfWQIwiQ3g+yZDhzLQcqfnaxmL6d2ZZSEEWethuXDIjUaQWBZdMIIx9qzUQUkJAQ=="/>
+            <enclosure url="https://focalveil.com/downloads/FocalVeil-0.1.55.zip" length="2994119" type="application/octet-stream" sparkle:edSignature="GpwuMokxEGWeg4BG5rKf2Ei69I74eeQvhei/LlwrJ2VqVwo9IOIIl9+ah9XYIXDDYHyFx3J2YDRl9WjJ59J6Aw=="/>
             <sparkle:deltas>
                 <enclosure url="https://focalveil.com/downloads/FocalVeil56-55.delta" sparkle:deltaFrom="55" length="52158" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976448" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="TTPz7FcMUiEkW685GqUUjc71w8DCK1csghe+Qs8AWRiJYgyS0QVeD+roIxfGtgA0Poq1bS2wdVMaYpSMZyLTAA=="/>
                 <enclosure url="https://focalveil.com/downloads/FocalVeil56-52.delta" sparkle:deltaFrom="52" length="119794" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="976448" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="On6AfWhJodahs2R6YghiyfAAm/NPnS/Wv1VLlb1oFYRgYrVkd06iTL443TKrzpGjkF5i/h9aDLFdAdWsNyToCQ=="/>
